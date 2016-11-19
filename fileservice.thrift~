@@ -1,0 +1,43 @@
+typedef string UserID
+typedef i64 Timestamp
+
+struct ServerID {
+  1:string ip;
+  2:i32 port;
+}
+
+
+exception SystemException {
+  1: optional string message
+}
+
+enum Status {
+  FAILED = 0;
+  SUCCESSFUL = 1;
+}
+
+struct StatusReport {
+  1: required Status status;
+}
+
+struct RFile {
+  1: optional string fName;
+  2: optional string content;
+  3: optional string isLocked; 
+  4: optional string locationIp; 	
+}
+
+service FileStore {
+  list<RFile> listOwnedFiles(1: UserID user)
+    throws (1: SystemException systemException),
+      
+  StatusReport writeFile(1: RFile rFile)
+    throws (1: SystemException systemException),
+  
+  RFile readFile(1: string filename, 2: UserID owner)
+    throws (1: SystemException systemException),
+
+  StatusReport deleteFile(1: string fName)
+    throws (1: SystemException systemException),
+
+}

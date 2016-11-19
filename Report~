@@ -1,0 +1,6 @@
+(a) The structure of code:
+	Handler.java is the handler for both Server(Participant) as well as Coordinator
+(b) the RPC interface your participants expose to the coordinator,
+(c) how failures are detected, and if failures do occur, how they are reflected to clients via the RPC interface
+that the coordinator exposes,
+(d) test cases you have explored, how to repeat these test cases, and sample input/output.

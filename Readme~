@@ -1,0 +1,18 @@
+Name : Shashank Ramgude
+BUMail : sramgud1@binghamton.edu
+
+Language used: Java
+
+Steps to run the project:
+1. Run command make
+2. For server(participant) run 
+	./server 5001
+
+3. For Coordinator
+	./coordinator.sh FileServers.txt localhost 5010
+	(FileServers.txt has all the details of servers(participants))
+
+4. For Client
+	./client.sh localhost 5010 input
+	(input file contains aa the operation i.e. read, write and delete)
+
