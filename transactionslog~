@@ -1,6 +1,0 @@
-Transaction(id:0, fName:test2, operation:r)
-Transaction(id:1, fName:test, content:wants1 to write, operation:w, canCommit:y, status:p)
-Transaction(id:1, fName:test, content:wants1 to write, doCommitOrAbort:c, operation:w, canCommit:y, status:c)
-Transaction(id:0, fName:test2, operation:r)
-Transaction(id:1, fName:test, content:wants1 to write, operation:w, canCommit:y, status:p)
-
